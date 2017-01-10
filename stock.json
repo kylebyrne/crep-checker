@@ -1,0 +1,94 @@
+{
+  "BB2361": {
+    "name": "NMD_R1 Primeknit Shoes",
+    "stock": 456,
+    "orderable": {
+      "4": false,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": false,
+      "3.5": false,
+      "4.5": true,
+      "5.5": true,
+      "6.5": true,
+      "7.5": true,
+      "8.5": false,
+      "9.5": false
+    }
+  },
+  "BY3033": {
+    "name": "NMD_R1 Shoes",
+    "stock": 693,
+    "orderable": {
+      "4": false,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": false,
+      "3.5": false,
+      "4.5": true,
+      "5.5": true,
+      "6.5": true,
+      "7.5": true,
+      "8.5": false,
+      "9.5": false
+    }
+  },
+  "BA7231": {
+    "name": "NMD_XR1 Shoes",
+    "stock": 5309,
+    "orderable": {
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true,
+      "10": true,
+      "11": true,
+      "12": true,
+      "13": true,
+      "3.5": true,
+      "4.5": true,
+      "5.5": true,
+      "6.5": true,
+      "7.5": true,
+      "8.5": true,
+      "9.5": true,
+      "10.5": true,
+      "11.5": true,
+      "12.5": true,
+      "13.5": true
+    }
+  },
+  "BA7251": {
+    "name": "NMD_R1 Trail Shoes",
+    "stock": 1106,
+    "orderable": {
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": false,
+      "9": true,
+      "10": true,
+      "11": true,
+      "12": true,
+      "13": false,
+      "3.5": false,
+      "4.5": false,
+      "5.5": true,
+      "6.5": true,
+      "7.5": true,
+      "8.5": false,
+      "9.5": false,
+      "10.5": false,
+      "11.5": true,
+      "12.5": false,
+      "13.5": true
+    }
+  }
+}
