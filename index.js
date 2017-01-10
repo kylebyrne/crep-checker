@@ -3,14 +3,14 @@
 'use strict';
 const request = require("tinyreq");
 const fs = require('fs');
-const program = require('commander');
+
 const obj = require("./stock.json");
-const co = require('co');
-const prompt = require('co-prompt');
+
+
 var chalk = require('chalk');
 var clear = require('clear');
 var figlet      = require('figlet');
-const exec = require('child_process').exec;
+
 var async = require("async")
 
 //My modules
