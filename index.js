@@ -17,8 +17,7 @@ let readList = fs.readFileSync('./readList.crep').toString().split('\n');
 clear();
 console.log(
   chalk.red(
-    figlet.textSync('...Crep Checker...', { horizontalLayout: 'full' ,
-  font: '3-d'})
+    figlet.textSync('...Crep Checker...', { horizontalLayout: 'full'})
   )
 );
 console.log(
