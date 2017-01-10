@@ -61,6 +61,6 @@ function createHtml(name, sizeVal, stock, styleCode){
       }
     }
   )
-  msg += '<br> http://production.store.adidasgroup.demandware.net/s/adidas-GB/dw/shop/v15_6/products/'+styleCode+'?client_id=2904a24b-e4b4-4ef7-89a4-2ebd2d175dde&expand=availability%2Cvariations%2Cprices'
+  msg += '<br> http://www.adidas.co.uk/nmd_r1-primeknit-shoes/'+styleCode +'.html'
   return msg
 }

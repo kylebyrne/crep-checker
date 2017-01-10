@@ -141,7 +141,7 @@
   },
   "S76519": {
     "name": "NMD_R1 Shoes",
-    "stock": 29,
+    "stock": 30,
     "orderable": {
       "4": true,
       "5": true,
@@ -161,7 +161,7 @@
       "19": false,
       "3.5": false,
       "4.5": true,
-      "5.5": false,
+      "5.5": true,
       "6.5": false,
       "7.5": false,
       "8.5": false,
