@@ -20,11 +20,11 @@ console.log(
     figlet.textSync('...Crep Checker...', { horizontalLayout: 'full'})
   )
 );
-console.log(
-  chalk.blue((figlet.textSync('Adidas', {
-    font: 'doom'
-  }))
-));
+// console.log(
+//   chalk.blue((figlet.textSync('Adidas', {
+//     font: 'doom'
+//   }))
+// ));
 
 //alert user if bot restarted
 mailer.sendStartedMail();
