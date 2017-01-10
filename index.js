@@ -24,7 +24,7 @@ console.log(
   )
 );
 
-let readList = fs.readFileSync('./readList.crep').toString().split(',');
+let readList = fs.readFileSync('./readList.crep').toString().split('\n');
 // console.log(readList)
 mailer.sendStartedMail();
 
