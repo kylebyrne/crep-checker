@@ -3,11 +3,8 @@ module.exports = {
   sendStartedMail : sendStartedMail
 }
 
-
 const nodemailer = require('nodemailer');
-
-
-var transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // use SSL
@@ -17,10 +14,6 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-// setup e-mail data
-
-
-// send mail with defined transport object
 function sendMail(name, sizeVal, stock, styleCode){
   var mailOptions = {
       from: '"Our Code World " <myemail@gmail.com>', // sender address (who sends)
@@ -33,7 +26,6 @@ function sendMail(name, sizeVal, stock, styleCode){
       if(error){
           return console.log(error);
       }
-
       console.log('Message sent: ' + info.response);
   });
 }
@@ -42,6 +34,7 @@ var options = {
     weekday: "long", year: "numeric", month: "short",
     day: "numeric", hour: "2-digit", minute: "2-digit"
 };
+
 function sendStartedMail(name, sizeVal, stock, styleCode){
   var mailOptions = {
       from: '"Our Code World " <myemail@gmail.com>', // sender address (who sends)
@@ -68,5 +61,6 @@ function createHtml(name, sizeVal, stock, styleCode){
       }
     }
   )
+  msg += '<br> http://production.store.adidasgroup.demandware.net/s/adidas-GB/dw/shop/v15_6/products/'+code+'?client_id=2904a24b-e4b4-4ef7-89a4-2ebd2d175dde&expand=availability%2Cvariations%2Cprices'
   return msg
 }
