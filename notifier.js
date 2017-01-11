@@ -1,9 +1,13 @@
 module.exports = {
   sendMail :  sendMail,
-  sendStartedMail : sendStartedMail
+  sendStartedMail : sendStartedMail,
+  sendTweet : sendTweet
 }
-
+const config = require('./config.js');
+const twit = require('twit');
 const nodemailer = require('nodemailer');
+
+const twitter =new twit(config)
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -13,6 +17,12 @@ const transporter = nodemailer.createTransport({
         pass: 'ybbazzsumaxmeglx'
     }
 });
+
+function sendTweet(name, stock, styleCode){
+  twitter.post('statuses/update', { status: 'STOCK UPDATE - ' + name + ' ' + styleCode +' new stock level : ' + stock + ' http://www.adidas.co.uk/' + styleCode + '.html'}, function(err, data, response) {
+    console.log(err);
+  })
+}
 
 function sendMail(name, sizeVal, stock, styleCode){
   var mailOptions = {

@@ -22,6 +22,7 @@
     "figlet": "^1.2.0",
     "fs": "0.0.1-security",
     "nodemailer": "^2.7.0",
-    "tinyreq": "^3.2.0"
+    "tinyreq": "^3.2.0",
+    "twit": "^2.2.5"
   }
 }

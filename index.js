@@ -9,11 +9,12 @@ const figlet = require('figlet');
 const async = require("async");
 
 //My modules
-const mailer = require('./mailer')
+const notifier = require('./notifier')
 const obj = require("./stock.json");
 let readList = fs.readFileSync('./readList.crep').toString().split('\n');
 
 //Initial terminal clearing and title
+
 clear();
 console.log(
   chalk.red(
@@ -27,7 +28,7 @@ console.log(
 // ));
 
 //alert user if bot restarted
-mailer.sendStartedMail();
+notifier.sendStartedMail();
 
 //Use async forever to initiate the check function every 6 minutes
 
@@ -64,7 +65,9 @@ function checkAvailability(code){
 
         //check if stock level has increased from database and send alerts
         if(obj[code].stock < bodyJSON.inventory.stock_level && obj[code].hasOwnProperty("stock")){
-          mailer.sendMail(name, sizeVal, bodyJSON.inventory.stock_level, code)
+          // notifier.sendMail(name, sizeVal, bodyJSON.inventory.stock_level, code)
+          console.log("tweet sent")
+          notifier.sendTweet(name ,bodyJSON.inventory.stock_level,code);
         }else{
           console.log("stock level of " + code + " not changed still " + obj[code].stock)
         }
