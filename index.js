@@ -38,7 +38,7 @@ async.forever(function(next){
   })
   setTimeout(function(){
     next()
-  }, 7500)
+  }, 60000)
 
 },function(err){
   console.log(err)
