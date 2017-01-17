@@ -42,7 +42,7 @@ async.forever(function(next){
   })
   setTimeout(function(){
     next()
-  }, 60000)
+  }, 2000)
 
 },function(err){
   console.log(err)
