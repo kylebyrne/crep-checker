@@ -34,7 +34,11 @@ notifier.sendStartedMail();
 
 async.forever(function(next){
   readList.forEach(styleCode => {
-    checkAvailability(styleCode.trim())
+    try{
+      checkAvailability(styleCode.trim())
+    }catch(err){
+      console.log(err)
+    }
   })
   setTimeout(function(){
     next()
