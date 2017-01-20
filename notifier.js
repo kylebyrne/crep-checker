@@ -18,8 +18,13 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+var options = {
+    weekday: "long", year: "numeric", month: "short",
+    day: "numeric", hour: "2-digit", minute: "2-digit"
+};
+
 function sendTweet(name, stock, styleCode){
-  twitter.post('statuses/update', { status: 'STOCK UPDATE - ' + name + ' ' + styleCode +' new stock level : ' + stock + ' http://www.adidas.co.uk/' + styleCode + '.html'}, function(err, data, response) {
+  twitter.post('statuses/update', { status: 'STOCK UPDATE - ' + name + ' ' + styleCode +' new stock level : ' + stock + ' http://www.adidas.co.uk/' + styleCode + '.html    ' + (new Date()).toLocaleTimeString("en-us", options)}, function(err, data, response) {
     console.log(err);
   })
 }
@@ -40,10 +45,7 @@ function sendMail(name, sizeVal, stock, styleCode){
   });
 }
 
-var options = {
-    weekday: "long", year: "numeric", month: "short",
-    day: "numeric", hour: "2-digit", minute: "2-digit"
-};
+
 
 function sendStartedMail(name, sizeVal, stock, styleCode){
   var mailOptions = {
