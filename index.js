@@ -63,7 +63,7 @@ function checkAvailability(code){
             obj[code] = {}
       }
 
-      if(bodyJSON.hasOwnProperty("variation_attributes")){
+      if(body.JSON){if(bodyJSON.hasOwnProperty("variation_attributes")){
         const sizeVal = bodyJSON.variation_attributes[0].values
         const name =bodyJSON.name
 
@@ -85,7 +85,7 @@ function checkAvailability(code){
           obj[code].orderable[val.name] = val.orderable
         })
 
-      }
+      }}
       else{
         console.log("Product with style code: " + code + " isnt available");
         obj[code].stock = 0
