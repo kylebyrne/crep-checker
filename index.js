@@ -28,7 +28,7 @@ console.log(
 // ));
 
 //alert user if bot restarted
-notifier.sendStartedMail();
+// notifier.sendStartedMail();
 
 //Use async forever to initiate the check function every 6 minutes
 
